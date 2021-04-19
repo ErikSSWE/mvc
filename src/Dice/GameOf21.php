@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace Eriksswe\Dice;
 
 use Eriksswe\Dice\DiceHand;
+
 use function Mos\Functions\{
     url
 };
 
 class GameOf21
-{   
-    protected $diceHand = NULL;
+{
+    protected $diceHand = null;
 
     protected $playerScore = 0;
 
@@ -23,6 +24,10 @@ class GameOf21
 
     public function __construct()
     {
+        if (empty($_SESSION["playerGames"])) {
+            $_SESSION["playerGames"] = 0;
+        }
+
         if (empty($_SESSION["howManySides"])) {
             $_SESSION["howManySides"] = 6;
         }
@@ -53,31 +58,30 @@ class GameOf21
                     $this->computerRoll();
                 }
 
-                if ($_SESSION["playerScore"] > 21)
-                {
-                    echo "<h2> Full! Dator Vinner </h2>";
+                if ($_SESSION["playerScore"] > 21) {
+                    //echo "<h2> Full! Dator Vinner </h2>";
                     $_SESSION["computerGames"] += 1;
                 } elseif ($_SESSION["computerScore"] <= 21 && $_SESSION["computerScore"] > $_SESSION["playerScore"]) {
-                    echo "<h2> Dator Vinner! </h2>";
+                    //echo "<h2> Dator Vinner! </h2>";
                     $_SESSION["computerGames"] += 1;
                 } elseif ($_SESSION["playerScore"] <= 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
-                    echo "<h2> Spelare Vinner! </h2>";
+                    //echo "<h2> Spelare Vinner! </h2>";
                     $_SESSION["playerGames"] += 1;
                 } elseif ($_SESSION["computerScore"] == $_SESSION["playerScore"] && $_SESSION["playerScore"] <= 21) {
-                    echo "<h2> Lika, Dator Vinner! </h2>";
+                    //echo "<h2> Lika, Dator Vinner! </h2>";
                     $_SESSION["computerGames"] += 1;
                 } elseif ($_SESSION["computerScore"] > 21 && $_SESSION["playerScore"] <= 21) {
-                    echo "<h2> Dator Full!, Spelare Vinner! </h2>";
+                    //echo "<h2> Dator Full!, Spelare Vinner! </h2>";
                     $_SESSION["playerGames"] += 1;
                 }
 
                 break;
             default:
-                echo "default";
+                //echo "default";
                 break;
         }
     }
-    
+
     public function initGame()
     {
         $_SESSION["playerScore"] = 0;
@@ -85,7 +89,6 @@ class GameOf21
         $_SESSION["howManyDices"] = (int)$_POST["howManyDices"] ?? 2;
         $_SESSION["howManySides"] = (int)$_POST["howManySides"] ?? 6;
         $this->diceHand = new DiceHand($_SESSION["howManyDices"], $_SESSION["howManySides"]);
-
     }
 
     public function continueGame()
@@ -94,7 +97,6 @@ class GameOf21
             (int)$_SESSION["howManyDices"] ?? 2,
             (int)$_SESSION["howManySides"] ?? 6
         );
-
     }
 
     public function playerRoll()
@@ -111,6 +113,7 @@ class GameOf21
     public function getData()
     {
         return [
+            "testinUrl" => url("/game21"),
             "header" => "Game21 page",
             "message" => "Test, player!",
             "howManyDices" => $_SESSION["howManyDices"] ?? 1,

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Mos\Router;
 
+use Eriksswe\Dice\GameOf21;
+
 use function Mos\Functions\{
     destroySession,
     redirectTo,
@@ -13,12 +15,6 @@ use function Mos\Functions\{
     url
 };
 
-use Eriksswe\Dice\GameOf21;
-
-
-/**
- * Class Router.
- */
 class Router
 {
     public static function dispatch(string $method, string $path): void

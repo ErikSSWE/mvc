@@ -115,9 +115,51 @@ Min "TIL" för detta kursmoment är hur man skapar klasser i php.
 
 \chapter{Controller}
 
-Här skriver du din redovisningstext för detta kursmoment.
+\section{Berätta på vilket sätt du drog nytta, eller inte, av att modellera din
+lösning med flödesdiagram och psuedokod.
+Använder du dig av top-down eller bottom-up när du planerar din kod?}
 
+Jag kände personligen att jag inte drog någon direkt nytta av min psuedokod men mer av flödesdiagramet
+där jag kunde följa hur man skulle gå till vida mer stegvis igenom spelet. Det blev väldigt ofta när jag skrev koden
+att jag tappade lite vilken del jag skulle göra så att säga och då kunde jag kolla där snabbt hur spelet skulle gå till
+och då var det bara att följa den efter det. Jag använde mig av top-down när jhag planerade min kod.
 
+\section{Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.}
+
+Arv är då en klass som ärever från en "basklass" och utökar den för sina önskade mål. T.ex GameOf21 utökas från DiceHand i mitt fall
+. komposition är då en klass som består av en annan klass. 
+interface tilllåter dig att skapa kod som specificerar vilken metod en klass måste implementera utan att behöva
+definera hur dessa metoder är implementerade. Enligt dbwebb defineras trait såhär: Man säger att en klass använder,
+uses, ett trait. En klass kan använda flera traits. När klassen använder ett trait så blir dess kod som en del
+av klassen. Man kan tänka sig att traitets kod kopieras in i klassen, det är en mental bild som fungerar.
+
+\section{Berätta om ditt spel från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd,
+vilken förbättringspotential ser du i koden/spelet,
+var uppgiften svårt/enkelt/utmanande, håller din kod god/hög kvalitet?}
+
+Mitt yatzy spel blev ganska bra, Hur jag gick tillvida för att lösa det var lite utmanande men
+det gick till slut, jag deog mycket insperation från förra kursmomentet och kollade hur jag gjorde mycket där
+från t.ex poäng till uppbyggare och mer. Sen fick jag öven bygga mycket nytt igen som t.ex poängräknaren
+och även hur man väljer vilka man ska slå eller ej (tärningarna) och lite annat. Det jag ser som förbättringspotential
+är för det mesta utsendemessigt då jag tänker på att man kanske kunde gjort det så man såg poängen som ett riktigt yatzy-
+schema om man har sett en riktig lapp från spelet sen så klart kunde jag även gjort så man kunde försökt välja vilket man 
+ville sätta poängen på så man inte behövde gå från 1 til 6 men även lägga till så man kunde få kanske kåk eller stege, tvåpar
+osv. men då hade jag behövt myvket mer tid på mig för att hinan med något sånt. 
+Uppgfiten skulle jag säga var lagom utmanande det var lite mer svårt för mig personligen att göra om hela routes och controller
+delen personligen och fixa mitt gmae of 21 så det fungerade med det nya "systemet". Min kod skulle jag enligt mig säga håller
+en ganska god kvalitet, hade jag hunnit så hade jag nog delat upp det i fler delar som hade jobbat tillsammans istället för att
+göra allt på en enda "page" så att säga.
+
+\section{Hur känner du för den kodstruktur som växer fram, tycker du det blev snyggare kod med modulerna router och request
+och hur vi jobbade med controllers eller vad är din syn på det?}
+
+Jag känner personligen nu efter detta kursmoment att det blir snyggare och bättre uppdelat men samtidigt också enklare
+att liksom följa med, även om jag inte har erfarenheter av detta sedan innan så kunde jag endån med min relativa kunskap
+följa med och se hur det gick till med hjälp av lektiosvideos.
+
+\section{Vilken är din TIL för detta kmom?}
+
+Min "TIL" för detta kursmoment är hur man kan bygga moduler med routes och request men även hur man jobbar med en controller.
 
 \chapter{Enhetstestning}
 

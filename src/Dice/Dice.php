@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Eriksswe\Dice;
 
-
 class Dice
 {
 
     protected int $sides = 6;
-    
+
     protected ?int $roll = null;
 
     public function roll(): int

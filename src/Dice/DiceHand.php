@@ -14,18 +14,18 @@ class DiceHand
 
     private ?int $roll = null;
 
-    function __construct($numberOfDices = 0, $numberOfSides = 0) {
+    public function __construct($numberOfDices = 0, $numberOfSides = 0)
+    {
         if ($numberOfDices > 0) {
             $this->numberOfDices = $numberOfDices;
         }
 
-        for ($i=0; $i < $this->numberOfDices; $i++) {
+        for ($i = 0; $i < $this->numberOfDices; $i++) {
             $this->dices[$i] = new Dice();
             if ($numberOfSides > 0) {
                 $this->dices[$i]->setSides($numberOfSides);
             }
         }
-        
     }
 
     public function rollDices(): int
@@ -41,5 +41,5 @@ class DiceHand
     public function getLastRoll(): int
     {
         return $this->roll;
-    } 
+    }
 }

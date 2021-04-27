@@ -31,7 +31,7 @@ class DiceHand
     public function rollDices(): int
     {
         $this->roll = 0;
-        foreach ($this->dices as $key => $dice) {
+        foreach ($this->dices as $dice) {
             $this->roll += $dice->roll();
         }
 

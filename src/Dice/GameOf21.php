@@ -57,28 +57,31 @@ class GameOf21
                 while ($_SESSION["computerScore"] < 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
                     $this->computerRoll();
                 }
-
-                if ($_SESSION["playerScore"] > 21) {
-                    //echo "<h2> Full! Dator Vinner </h2>";
-                    $_SESSION["computerGames"] += 1;
-                } elseif ($_SESSION["computerScore"] <= 21 && $_SESSION["computerScore"] > $_SESSION["playerScore"]) {
-                    //echo "<h2> Dator Vinner! </h2>";
-                    $_SESSION["computerGames"] += 1;
-                } elseif ($_SESSION["playerScore"] <= 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
-                    //echo "<h2> Spelare Vinner! </h2>";
-                    $_SESSION["playerGames"] += 1;
-                } elseif ($_SESSION["computerScore"] == $_SESSION["playerScore"] && $_SESSION["playerScore"] <= 21) {
-                    //echo "<h2> Lika, Dator Vinner! </h2>";
-                    $_SESSION["computerGames"] += 1;
-                } elseif ($_SESSION["computerScore"] > 21 && $_SESSION["playerScore"] <= 21) {
-                    //echo "<h2> Dator Full!, Spelare Vinner! </h2>";
-                    $_SESSION["playerGames"] += 1;
-                }
-
+                $this->correct();
                 break;
             default:
                 //echo "default";
                 break;
+        }
+    }
+
+    public function correct()
+    {
+        if ($_SESSION["playerScore"] > 21) {
+            //echo "<h2> Full! Dator Vinner </h2>";
+            $_SESSION["computerGames"] += 1;
+        } elseif ($_SESSION["computerScore"] <= 21 && $_SESSION["computerScore"] > $_SESSION["playerScore"]) {
+            //echo "<h2> Dator Vinner! </h2>";
+            $_SESSION["computerGames"] += 1;
+        } elseif ($_SESSION["playerScore"] <= 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
+            //echo "<h2> Spelare Vinner! </h2>";
+            $_SESSION["playerGames"] += 1;
+        } elseif ($_SESSION["computerScore"] == $_SESSION["playerScore"] && $_SESSION["playerScore"] <= 21) {
+            //echo "<h2> Lika, Dator Vinner! </h2>";
+            $_SESSION["computerGames"] += 1;
+        } elseif ($_SESSION["computerScore"] > 21 && $_SESSION["playerScore"] <= 21) {
+            //echo "<h2> Dator Full!, Spelare Vinner! </h2>";
+            $_SESSION["playerGames"] += 1;
         }
     }
 

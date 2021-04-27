@@ -17,11 +17,11 @@ class YatzyGame
     protected $hand = [
         "throws" => "",
         "dices" => [
-            1 => "",
-            2 => "",
-            3 => "",
-            4 => "",
-            5 => "",
+            1 => 0,
+            2 => 0,
+            3 => 0,
+            4 => 0,
+            5 => 0,
         ]
     ];
 
@@ -50,9 +50,8 @@ class YatzyGame
                     $this->setScore();
                     $_SESSION["rolls"] = 0;
                     $_SESSION["number"] += 1;
-                } else {
-                    $_SESSION["message"] = "Spelet är nu avklarat!";
                 }
+                $_SESSION["message"] = "Spelet är nu avklarat!";
                 break;
             case 'slå':
                 $this->continueGame();
@@ -100,9 +99,8 @@ class YatzyGame
         if ($_SESSION["rolls"] < 3) {
             $this->dices();
             $_SESSION["rolls"] += 1;
-        } else {
-            $_SESSION["message"] = $_SESSION["number"];
         }
+        $_SESSION["message"] = $_SESSION["number"];
     }
 
 

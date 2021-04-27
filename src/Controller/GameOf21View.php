@@ -21,11 +21,6 @@ class GameOf21View
 
         $game = new GameOf21();
 
-        $message = $game->getData();
-
-        //print_r($message);
-
-
         $body = renderTwigView("game21.html", $game->getData());
 
         return $psr17Factory

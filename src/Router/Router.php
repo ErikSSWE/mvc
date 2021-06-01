@@ -61,12 +61,12 @@ class Router
             return;
         } else if ($method === "POST" && $path === "/game21") {
             $game = new GameOf21();
-            $body = renderTwigView("game21.html", $game->getData());
+            $body = renderTwigView("game21.html.twig", $game->getData());
             sendResponse($body);
             return;
         } else if ($method === "GET" && $path === "/game21") {
             $game = new GameOf21();
-            $body = renderTwigView("game21.html", $game->getData());
+            $body = renderTwigView("game21.html.twig", $game->getData());
             sendResponse($body);
             return;
         }

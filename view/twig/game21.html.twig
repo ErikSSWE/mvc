@@ -6,9 +6,10 @@
     <input name="howManySides" type="number" min="1" value="{{ howManySides }}">
     <br>
     <input type="submit" name="action" value="start">
-    <input type="submit" name="action" value="restart">
     <input type="submit" name="action" value="roll">
-    <input type="submit" name="action" value="computer">
+    {% if test == 0 %}
+        <input type="submit" name="action" value="computer">
+    {% endif %}
     <input type="submit" name="action" value="end">
 </form>
 

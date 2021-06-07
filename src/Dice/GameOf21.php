@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Eriksswe\Dice;
 
 use Eriksswe\Dice\DiceHand;
+use SebastianBergmann\Environment\Console;
 
 use function Mos\Functions\{
     url
@@ -28,6 +29,10 @@ class GameOf21
             $_SESSION["playerGames"] = 0;
         }
 
+        if (empty($_SESSION["computerGames"])) {
+            $_SESSION["computerGames"] = 0;
+        }
+
         if (empty($_SESSION["howManySides"])) {
             $_SESSION["howManySides"] = 6;
         }
@@ -35,6 +40,8 @@ class GameOf21
         if (empty($_SESSION["howManyDices"])) {
             $_SESSION["howManyDices"] = 2;
         }
+
+        $_SESSION['pushes'] = 0;
 
         $action = strtolower($_POST["action"] ?? "");
 
@@ -44,12 +51,11 @@ class GameOf21
                 $this->playerRoll();
                 break;
             case 'start':
-            case 'restart':
-                $this->initGame();
+                $_SESSION['playerScore'] = 0;
+                $_SESSION['computerScore'] = 0;
                 break;
             case 'end':
-                $_SESSION["computerGames"] = 0;
-                $_SESSION["playerGames"] = 0;
+                $this->endGame();
                 $this->initGame();
                 break;
             case 'computer':
@@ -57,29 +63,33 @@ class GameOf21
                 while ($_SESSION["computerScore"] < 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
                     $this->computerRoll();
                 }
-
-                if ($_SESSION["playerScore"] > 21) {
-                    //echo "<h2> Full! Dator Vinner </h2>";
-                    $_SESSION["computerGames"] += 1;
-                } elseif ($_SESSION["computerScore"] <= 21 && $_SESSION["computerScore"] > $_SESSION["playerScore"]) {
-                    //echo "<h2> Dator Vinner! </h2>";
-                    $_SESSION["computerGames"] += 1;
-                } elseif ($_SESSION["playerScore"] <= 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
-                    //echo "<h2> Spelare Vinner! </h2>";
-                    $_SESSION["playerGames"] += 1;
-                } elseif ($_SESSION["computerScore"] == $_SESSION["playerScore"] && $_SESSION["playerScore"] <= 21) {
-                    //echo "<h2> Lika, Dator Vinner! </h2>";
-                    $_SESSION["computerGames"] += 1;
-                } elseif ($_SESSION["computerScore"] > 21 && $_SESSION["playerScore"] <= 21) {
-                    //echo "<h2> Dator Full!, Spelare Vinner! </h2>";
-                    $_SESSION["playerGames"] += 1;
-                }
-
+                $this->correct();
+                $_SESSION['pushes'] += 1;
                 break;
             default:
-                //echo "default";
                 break;
         }
+    }
+
+    public function correct()
+    {
+        if ($_SESSION["playerScore"] > 21) {
+            $_SESSION["computerGames"] += 1;
+        } elseif ($_SESSION["computerScore"] <= 21 && $_SESSION["computerScore"] > $_SESSION["playerScore"]) {
+            $_SESSION["computerGames"] += 1;
+        } elseif ($_SESSION["playerScore"] <= 21 && $_SESSION["computerScore"] < $_SESSION["playerScore"]) {
+            $_SESSION["playerGames"] += 1;
+        } elseif ($_SESSION["computerScore"] == $_SESSION["playerScore"] && $_SESSION["playerScore"] <= 21) {
+            $_SESSION["computerGames"] += 1;
+        } elseif ($_SESSION["computerScore"] > 21 && $_SESSION["playerScore"] <= 21) {
+            $_SESSION["playerGames"] += 1;
+        }
+    }
+
+    public function endGame()
+    {
+        $_SESSION["computerGames"] = 0;
+        $_SESSION["playerGames"] = 0;
     }
 
     public function initGame()
@@ -123,6 +133,8 @@ class GameOf21
             "playerGames" => $_SESSION["playerGames"] ?? 0,
             "computerGames" => $_SESSION["computerGames"] ?? 0,
             "back" => url("/"),
+            'pushes' => $_SESSION['pushes'],
+            'test' => $_SESSION['pushes'],
         ];
     }
 }

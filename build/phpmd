@@ -1,10 +1,6 @@
 /home/erik/dbwebb-kurser/mvc/me/game/src/Controller/Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Controller/GameOf21View.php:24	Avoid unused local variables such as '$message'.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php:34	Avoid unused local variables such as '$key'.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:25	The method __construct() has a Cyclomatic Complexity of 20. The configured cyclomatic complexity threshold is 10.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:25	The method __construct() has an NPath complexity of 280. The configured NPath complexity threshold is 200.
+/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:26	The method __construct() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
+/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:74	The method correct() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
 /home/erik/dbwebb-kurser/mvc/me/game/src/Router/Router.php:20	The method dispatch() has a Cyclomatic Complexity of 17. The configured cyclomatic complexity threshold is 10.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:53	The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:103	The method continueGame uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:109	The method dices() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:109	The method dices() has an NPath complexity of 243. The configured NPath complexity threshold is 200.
+/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:107	The method dices() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
+/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:107	The method dices() has an NPath complexity of 243. The configured NPath complexity threshold is 200.

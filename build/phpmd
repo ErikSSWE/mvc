@@ -1,6 +1,5 @@
 /home/erik/dbwebb-kurser/mvc/me/game/src/Controller/Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:25	The method __construct() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
-/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:68	The method correct() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
+/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:26	The method __construct() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.
+/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php:76	The method correct() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
 /home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:107	The method dices() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
 /home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php:107	The method dices() has an NPath complexity of 243. The configured NPath complexity threshold is 200.
-/home/erik/dbwebb-kurser/mvc/me/game/test/Dice/GameOf21Test.php:12	The class GameOf21Test has 11 public methods. Consider refactoring GameOf21Test to keep number of public methods under 10.

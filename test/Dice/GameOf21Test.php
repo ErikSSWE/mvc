@@ -23,6 +23,9 @@ class GameOf21Test extends TestCase
         $_SESSION = [
             "playerScore" => 0
         ];
+        $_SESSION['howManyDices'] = 2;
+        $_SESSION['howManySides'] = 6;
+        $controller->continueGame();
         $controller->playerRoll();
 
         $this->assertIsInt($_SESSION["playerScore"]);
@@ -37,6 +40,9 @@ class GameOf21Test extends TestCase
         $_SESSION = [
             "computerScore" => 0
         ];
+        $_SESSION['howManyDices'] = 2;
+        $_SESSION['howManySides'] = 6;
+        $controller->continueGame();
         $controller->computerRoll();
 
         $this->assertIsInt($_SESSION["computerScore"]);
@@ -93,24 +99,6 @@ class GameOf21Test extends TestCase
 
         $this->assertIsInt($_SESSION["playerScore"]);
     }
-
-    public function testDefault()
-    {
-        $_POST["howManyDices"] = 2;
-        $_POST["howManySides"] = 6;
-        $_SESSION["computerScore"] = 0;
-        $_SESSION["computerGames"] = 0;
-        $_POST["action"] = "blabla";
-        $controller = new GameOf21();
-        $_SESSION = [
-            "playerScore" => 0
-        ];
-        $data = $controller->getData();
-
-        $this->assertIsInt($_SESSION["playerScore"]);
-        $this->assertEquals($_SESSION["playerScore"], $data["playerScore"]);
-    }
-
 
     public function testPlayerFull()
     {

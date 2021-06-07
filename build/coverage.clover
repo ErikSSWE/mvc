@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1619513441">
-  <project timestamp="1619513441">
+<coverage generated="1623068085">
+  <project timestamp="1623068085">
     <file name="/home/erik/dbwebb-kurser/mvc/me/game/config/bootstrap.php">
       <line num="10" type="stmt" count="1"/>
       <line num="11" type="stmt" count="1"/>
@@ -147,14 +147,14 @@
       <class name="Eriksswe\Dice\Dice" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
       </class>
-      <line num="14" type="method" name="roll" visibility="public" complexity="1" crap="1" count="8"/>
-      <line num="16" type="stmt" count="8"/>
-      <line num="18" type="stmt" count="8"/>
+      <line num="14" type="method" name="roll" visibility="public" complexity="1" crap="1" count="11"/>
+      <line num="16" type="stmt" count="11"/>
+      <line num="18" type="stmt" count="11"/>
       <line num="21" type="method" name="getLastRoll" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="23" type="stmt" count="1"/>
-      <line num="26" type="method" name="setSides" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="28" type="stmt" count="6"/>
-      <line num="29" type="stmt" count="6"/>
+      <line num="26" type="method" name="setSides" visibility="public" complexity="1" crap="1" count="9"/>
+      <line num="28" type="stmt" count="9"/>
+      <line num="29" type="stmt" count="9"/>
       <metrics loc="30" ncloc="30" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
     </file>
     <file name="/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/DiceGraphical.php">
@@ -169,99 +169,109 @@
       <class name="Eriksswe\Dice\DiceHand" namespace="global">
         <metrics complexity="7" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
       </class>
-      <line num="17" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="7"/>
-      <line num="19" type="stmt" count="7"/>
-      <line num="20" type="stmt" count="7"/>
-      <line num="23" type="stmt" count="7"/>
-      <line num="24" type="stmt" count="7"/>
-      <line num="25" type="stmt" count="7"/>
-      <line num="26" type="stmt" count="6"/>
-      <line num="29" type="stmt" count="7"/>
-      <line num="31" type="method" name="rollDices" visibility="public" complexity="2" crap="2" count="6"/>
-      <line num="33" type="stmt" count="6"/>
-      <line num="34" type="stmt" count="6"/>
-      <line num="35" type="stmt" count="6"/>
-      <line num="38" type="stmt" count="6"/>
+      <line num="17" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="10"/>
+      <line num="19" type="stmt" count="10"/>
+      <line num="20" type="stmt" count="10"/>
+      <line num="23" type="stmt" count="10"/>
+      <line num="24" type="stmt" count="10"/>
+      <line num="25" type="stmt" count="10"/>
+      <line num="26" type="stmt" count="9"/>
+      <line num="29" type="stmt" count="10"/>
+      <line num="31" type="method" name="rollDices" visibility="public" complexity="2" crap="2" count="9"/>
+      <line num="33" type="stmt" count="9"/>
+      <line num="34" type="stmt" count="9"/>
+      <line num="35" type="stmt" count="9"/>
+      <line num="38" type="stmt" count="9"/>
       <line num="41" type="method" name="getLastRoll" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="43" type="stmt" count="1"/>
       <metrics loc="45" ncloc="45" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
     </file>
     <file name="/home/erik/dbwebb-kurser/mvc/me/game/src/Dice/GameOf21.php">
       <class name="Eriksswe\Dice\GameOf21" namespace="global">
-        <metrics complexity="27" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="64" elements="71" coveredelements="71"/>
+        <metrics complexity="29" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="73" elements="81" coveredelements="81"/>
       </class>
-      <line num="25" type="method" name="__construct" visibility="public" complexity="12" crap="12" count="12"/>
-      <line num="27" type="stmt" count="12"/>
+      <line num="26" type="method" name="__construct" visibility="public" complexity="13" crap="13" count="11"/>
       <line num="28" type="stmt" count="11"/>
-      <line num="31" type="stmt" count="12"/>
-      <line num="32" type="stmt" count="7"/>
-      <line num="35" type="stmt" count="12"/>
-      <line num="36" type="stmt" count="7"/>
-      <line num="39" type="stmt" count="12"/>
-      <line num="41" type="stmt" count="12"/>
-      <line num="42" type="stmt" count="12"/>
-      <line num="43" type="stmt" count="1"/>
-      <line num="44" type="stmt" count="1"/>
-      <line num="45" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="10"/>
+      <line num="32" type="stmt" count="11"/>
+      <line num="33" type="stmt" count="10"/>
+      <line num="36" type="stmt" count="11"/>
+      <line num="37" type="stmt" count="4"/>
+      <line num="40" type="stmt" count="11"/>
+      <line num="41" type="stmt" count="4"/>
+      <line num="44" type="stmt" count="11"/>
       <line num="46" type="stmt" count="11"/>
-      <line num="47" type="stmt" count="8"/>
-      <line num="48" type="stmt" count="3"/>
-      <line num="49" type="stmt" count="3"/>
-      <line num="50" type="stmt" count="8"/>
+      <line num="48" type="stmt" count="11"/>
+      <line num="49" type="stmt" count="11"/>
+      <line num="50" type="stmt" count="1"/>
       <line num="51" type="stmt" count="1"/>
       <line num="52" type="stmt" count="1"/>
-      <line num="53" type="stmt" count="1"/>
-      <line num="54" type="stmt" count="1"/>
-      <line num="55" type="stmt" count="7"/>
-      <line num="56" type="stmt" count="1"/>
-      <line num="57" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="10"/>
+      <line num="54" type="stmt" count="3"/>
+      <line num="55" type="stmt" count="3"/>
+      <line num="56" type="stmt" count="3"/>
+      <line num="57" type="stmt" count="7"/>
       <line num="58" type="stmt" count="1"/>
+      <line num="59" type="stmt" count="1"/>
       <line num="60" type="stmt" count="1"/>
-      <line num="61" type="stmt" count="1"/>
-      <line num="64" type="stmt" count="6"/>
-      <line num="66" type="stmt" count="12"/>
-      <line num="68" type="method" name="correct" visibility="public" complexity="10" crap="10" count="5"/>
+      <line num="61" type="stmt" count="6"/>
+      <line num="62" type="stmt" count="5"/>
+      <line num="63" type="stmt" count="5"/>
+      <line num="64" type="stmt" count="5"/>
+      <line num="65" type="stmt" count="4"/>
+      <line num="67" type="stmt" count="5"/>
+      <line num="69" type="stmt" count="5"/>
       <line num="70" type="stmt" count="5"/>
       <line num="72" type="stmt" count="1"/>
-      <line num="73" type="stmt" count="4"/>
-      <line num="75" type="stmt" count="1"/>
-      <line num="76" type="stmt" count="3"/>
-      <line num="78" type="stmt" count="1"/>
+      <line num="74" type="stmt" count="11"/>
+      <line num="76" type="method" name="correct" visibility="public" complexity="10" crap="10" count="5"/>
+      <line num="78" type="stmt" count="5"/>
       <line num="79" type="stmt" count="2"/>
-      <line num="81" type="stmt" count="1"/>
-      <line num="82" type="stmt" count="1"/>
-      <line num="84" type="stmt" count="1"/>
-      <line num="86" type="stmt" count="5"/>
-      <line num="88" type="method" name="initGame" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="90" type="stmt" count="4"/>
-      <line num="91" type="stmt" count="4"/>
-      <line num="92" type="stmt" count="4"/>
-      <line num="93" type="stmt" count="4"/>
-      <line num="94" type="stmt" count="4"/>
-      <line num="95" type="stmt" count="4"/>
-      <line num="97" type="method" name="continueGame" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="99" type="stmt" count="2"/>
-      <line num="100" type="stmt" count="2"/>
-      <line num="101" type="stmt" count="2"/>
-      <line num="103" type="stmt" count="2"/>
-      <line num="105" type="method" name="playerRoll" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="107" type="stmt" count="4"/>
-      <line num="108" type="stmt" count="4"/>
-      <line num="110" type="method" name="computerRoll" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="112" type="stmt" count="2"/>
-      <line num="113" type="stmt" count="2"/>
-      <line num="116" type="method" name="getData" visibility="public" complexity="1" crap="1" count="3"/>
-      <line num="119" type="stmt" count="3"/>
-      <line num="120" type="stmt" count="3"/>
-      <line num="121" type="stmt" count="3"/>
-      <line num="122" type="stmt" count="3"/>
-      <line num="123" type="stmt" count="3"/>
-      <line num="124" type="stmt" count="3"/>
-      <line num="125" type="stmt" count="3"/>
-      <line num="126" type="stmt" count="3"/>
-      <line num="127" type="stmt" count="3"/>
-      <line num="128" type="stmt" count="3"/>
-      <metrics loc="131" ncloc="125" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="64" elements="71" coveredelements="71"/>
+      <line num="80" type="stmt" count="5"/>
+      <line num="81" type="stmt" count="2"/>
+      <line num="82" type="stmt" count="3"/>
+      <line num="83" type="stmt" count="1"/>
+      <line num="84" type="stmt" count="2"/>
+      <line num="85" type="stmt" count="2"/>
+      <line num="86" type="stmt" count="2"/>
+      <line num="87" type="stmt" count="2"/>
+      <line num="89" type="stmt" count="5"/>
+      <line num="91" type="method" name="endGame" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="93" type="stmt" count="1"/>
+      <line num="94" type="stmt" count="1"/>
+      <line num="95" type="stmt" count="1"/>
+      <line num="97" type="method" name="initGame" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="99" type="stmt" count="1"/>
+      <line num="100" type="stmt" count="1"/>
+      <line num="101" type="stmt" count="1"/>
+      <line num="102" type="stmt" count="1"/>
+      <line num="103" type="stmt" count="1"/>
+      <line num="104" type="stmt" count="1"/>
+      <line num="106" type="method" name="continueGame" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="108" type="stmt" count="8"/>
+      <line num="109" type="stmt" count="8"/>
+      <line num="110" type="stmt" count="8"/>
+      <line num="112" type="stmt" count="8"/>
+      <line num="114" type="method" name="playerRoll" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="116" type="stmt" count="4"/>
+      <line num="117" type="stmt" count="4"/>
+      <line num="119" type="method" name="computerRoll" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="121" type="stmt" count="5"/>
+      <line num="122" type="stmt" count="5"/>
+      <line num="125" type="method" name="getData" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="128" type="stmt" count="2"/>
+      <line num="129" type="stmt" count="2"/>
+      <line num="130" type="stmt" count="2"/>
+      <line num="131" type="stmt" count="2"/>
+      <line num="132" type="stmt" count="2"/>
+      <line num="133" type="stmt" count="2"/>
+      <line num="134" type="stmt" count="2"/>
+      <line num="135" type="stmt" count="2"/>
+      <line num="136" type="stmt" count="2"/>
+      <line num="137" type="stmt" count="2"/>
+      <line num="138" type="stmt" count="2"/>
+      <line num="139" type="stmt" count="2"/>
+      <metrics loc="142" ncloc="142" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="73" elements="81" coveredelements="81"/>
     </file>
     <file name="/home/erik/dbwebb-kurser/mvc/me/game/src/Yatzy/YatzyGame.php">
       <class name="Eriksswe\Yatzy\YatzyGame" namespace="global">
@@ -370,10 +380,10 @@
       <line num="71" type="stmt" count="1"/>
       <line num="76" type="stmt" count="1"/>
       <line num="79" type="stmt" count="4"/>
-      <line num="124" type="stmt" count="17"/>
-      <line num="136" type="stmt" count="18"/>
-      <line num="138" type="stmt" count="18"/>
-      <line num="139" type="stmt" count="18"/>
+      <line num="124" type="stmt" count="16"/>
+      <line num="136" type="stmt" count="17"/>
+      <line num="138" type="stmt" count="17"/>
+      <line num="139" type="stmt" count="17"/>
       <line num="142" type="stmt" count="1"/>
       <line num="143" type="stmt" count="1"/>
       <line num="146" type="stmt" count="1"/>
@@ -413,6 +423,6 @@
       <line num="213" type="stmt" count="2"/>
       <metrics loc="213" ncloc="139" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="54" elements="57" coveredelements="54"/>
     </file>
-    <metrics files="16" loc="923" ncloc="806" classes="13" methods="30" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="295" coveredstatements="289" elements="325" coveredelements="319"/>
+    <metrics files="16" loc="934" ncloc="823" classes="13" methods="31" coveredmethods="31" conditionals="0" coveredconditionals="0" statements="304" coveredstatements="298" elements="335" coveredelements="329"/>
   </project>
 </coverage>

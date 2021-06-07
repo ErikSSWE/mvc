@@ -21,7 +21,7 @@ class GameOf21View
 
         $game = new GameOf21();
 
-        $body = renderTwigView("game21.html", $game->getData());
+        $body = renderTwigView("game21.html.twig", $game->getData());
 
         return $psr17Factory
             ->createResponse(200)
